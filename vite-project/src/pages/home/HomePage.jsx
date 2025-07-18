@@ -1,8 +1,11 @@
 import React from "react";
 import Layout from "../../components/layout/Layout";
+import HeroSection from "../../components/heroSection/HeroSection";
 
 const HomePage = () => {
-  return <Layout>Home Page</Layout>;
+  return <Layout>
+    <HeroSection/>
+  </Layout>;
   
 };
 
