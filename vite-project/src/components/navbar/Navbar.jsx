@@ -28,9 +28,9 @@ const Navbar = () => {
             </li>
 
             {/* Admin */}
-            {/* <li>
+            { <li>
                 <Link to={'/'}>Admin</Link>
-            </li> */}
+            </li> }
 
             {/* logout */}
             {/* <li>
@@ -52,7 +52,7 @@ const Navbar = () => {
                 {/* left  */}
                 <div className="left py-3 lg:py-0">
                     <Link to={'/'}>
-                    <h2 className=" font-bold text-white text-2xl text-center">E-Bazaar</h2>
+                    <h2 className=" font-bold text-white text-2xl text-center">E-bazaar</h2>
                     </Link>
                 </div>
 
