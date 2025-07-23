@@ -1,9 +1,21 @@
-import  { Link } from "react-router-dom";
-import React from "react";
+import { Link, useNavigate } from "react-router-dom";
 import SearchBar from "../searchBar/SearchBar";
+import React from "react";
 
 
 const Navbar = () => {
+    // get user from localStorage 
+    const user = JSON.parse(localStorage.getItem('users'));
+
+    // navigate 
+    const navigate = useNavigate();
+
+    // logout function 
+    const logout = () => {
+        localStorage.clear('users');
+        navigate("/login")
+    }
+
     // navList Data
     const navList = (
         <ul className="flex space-x-3 text-white font-medium text-md px-5 ">
@@ -18,24 +30,29 @@ const Navbar = () => {
             </li>
 
             {/* Signup */}
-            <li>
+            {!user ? <li>
                 <Link to={'/signup'}>Signup</Link>
-            </li>
+            </li> : ""}
+
+            {/* Signup */}
+            {!user ? <li>
+                <Link to={'/login'}>Login</Link>
+            </li> : ""}
 
             {/* User */}
-            <li>
-                <Link to={'/'}>Kamal</Link>
-            </li>
+            {user?.role === "user" && <li>
+                <Link to={'/user-dashboard'}>User</Link>
+            </li>}
 
             {/* Admin */}
-            { <li>
-                <Link to={'/'}>Admin</Link>
-            </li> }
+            {user?.role === "admin" && <li>
+                <Link to={'/admin-dashboard'}>Admin</Link>
+            </li>}
 
             {/* logout */}
-            {/* <li>
+            {user && <li className=" cursor-pointer" onClick={logout}>
                 logout
-            </li> */}
+            </li>}
 
             {/* Cart */}
             <li>
@@ -52,7 +69,7 @@ const Navbar = () => {
                 {/* left  */}
                 <div className="left py-3 lg:py-0">
                     <Link to={'/'}>
-                    <h2 className=" font-bold text-white text-2xl text-center">E-bazaar</h2>
+                        <h2 className=" font-bold text-white text-2xl text-center">E-Bharat</h2>
                     </Link>
                 </div>
 

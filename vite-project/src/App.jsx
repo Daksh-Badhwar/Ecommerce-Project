@@ -14,10 +14,14 @@ import Signup from "./pages/registration/Signup";
 import Login from "./pages/registration/Login";
 import UserDashboard from "./pages/user/UserDashboard";
 import AdminDashboard from "./pages/admin/AdminDashboard";
+import AddProductPage from "./pages/admin/AddProductPage";
+import MyState from "./context/myState";
+
+import UpdateProductPage from "./pages/admin/UpdateProductPage";
 
 const App = () => {
   return (
-    <div>
+    <MyState>
       <Router>
         <ScrollTop />
         <Routes>
@@ -30,9 +34,11 @@ const App = () => {
           <Route path="/login" element={<Login />} />
           <Route path="/user-dashboard" element={<UserDashboard />} />
           <Route path="/admin-dashboard" element={<AdminDashboard />} />
+          <Route path="/addproduct" element={<AddProductPage/>}/>
+          <Route path="/updateproduct" element={<UpdateProductPage/>}/>
         </Routes>
       </Router>
-    </div>
+    </MyState>
   );
 }
 
