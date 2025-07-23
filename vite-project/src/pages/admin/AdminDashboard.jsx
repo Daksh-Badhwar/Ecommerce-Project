@@ -1,10 +1,11 @@
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import React from "react";
-import OrderDetail from '../../components/admin/OrderDetail';
 import ProductDetail from '../../components/admin/ProductDetail';
+import OrderDetail from '../../components/admin/OrderDetail';
 import UserDetail from '../../components/admin/UserDetail';
+import React from "react";
 
 const AdminDashboard = () => {
+    const user = JSON.parse(localStorage.getItem('users'));
     return (
         <div>
             {/* Top */}
@@ -25,8 +26,29 @@ const AdminDashboard = () => {
                         </div>
                         {/* text  */}
                         <div className="">
-                            <h1 className=" text-center text-lg text-pink-500"><span className=" font-bold">Name :</span> Kamal Nayan Upadhyay</h1>
-                            <h1 className=" text-center text-lg text-pink-500"><span className=" font-bold">Email :</span> test@gmail.com</h1>
+                            {/* Name  */}
+                            <h1 className=" text-center text-lg text-pink-500">
+                                <span className=" font-bold">Name : </span>
+                                {user?.name}
+                            </h1>
+
+                            {/* Email  */}
+                            <h1 className=" text-center text-lg text-pink-500">
+                                <span className=" font-bold">Email : </span>
+                                {user?.email}
+                            </h1>
+
+                            {/* Date  */}
+                            <h1 className=" text-center text-lg text-pink-500">
+                                <span className=" font-bold">Date : </span>
+                                {user?.date}
+                            </h1>
+
+                            {/* Role  */}
+                            <h1 className=" text-center text-lg text-pink-500">
+                                <span className=" font-bold">Role : </span>
+                                {user?.role}
+                            </h1>
                         </div>
                     </div>
                 </div>
@@ -119,13 +141,13 @@ const AdminDashboard = () => {
 
                                     </div>
                                     <h2 className="title-font font-medium text-3xl text-pink-400 fonts1" >10</h2>
-                                    <p className=" text-pink-500  font-bold" >Total Users</p>
+                                    <p className=" text-pink-500  font-bold" >Total Order</p>
                                 </div>
                             </Tab>
                         </TabList>
 
                         <TabPanel>
-                           <ProductDetail/>
+                            <ProductDetail />
                         </TabPanel>
 
                         <TabPanel>
@@ -133,7 +155,7 @@ const AdminDashboard = () => {
                         </TabPanel>
 
                         <TabPanel>
-                            <UserDetail/>
+                           <UserDetail/>
                         </TabPanel>
                     </Tabs>
                 </div>
