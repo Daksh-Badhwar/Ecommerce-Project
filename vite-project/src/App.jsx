@@ -54,6 +54,12 @@ const App = () => {
               <UpdateProductPage />
             </ProtectedRouteForAdmin>
           } />
+           <Route path="/updateproduct/:id" element={
+            <ProtectedRouteForAdmin>
+              <UpdateProductPage />
+            </ProtectedRouteForAdmin>
+          } />
+
         </Routes>
         <Toaster />
       </Router>
