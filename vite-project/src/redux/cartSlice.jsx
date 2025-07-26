@@ -1,7 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit'
-import React from "react";
 
-const initialState = [];
+const initialState = JSON.parse(localStorage.getItem('cart')) ?? [];
+
+
 
 export const cartSlice = createSlice({
     name: 'cart',

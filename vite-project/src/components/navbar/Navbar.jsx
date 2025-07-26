@@ -1,5 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import SearchBar from "../searchBar/SearchBar";
+import { useSelector } from "react-redux";
 import React from "react";
 
 
@@ -15,6 +16,9 @@ const Navbar = () => {
         localStorage.clear('users');
         navigate("/login")
     }
+
+    // CartItems
+    const cartItems = useSelector((state) => state.cart);
 
     // navList Data
     const navList = (
@@ -57,7 +61,7 @@ const Navbar = () => {
             {/* Cart */}
             <li>
                 <Link to={'/cart'}>
-                    Cart(0)
+                    Cart({cartItems.length})
                 </Link>
             </li>
         </ul>
@@ -69,7 +73,7 @@ const Navbar = () => {
                 {/* left  */}
                 <div className="left py-3 lg:py-0">
                     <Link to={'/'}>
-                        <h2 className=" font-bold text-white text-2xl text-center">E-Bazaar</h2>
+                        <h2 className=" font-bold text-white text-2xl text-center">E-Bharat</h2>
                     </Link>
                 </div>
 
