@@ -45,16 +45,16 @@ const Navbar = () => {
 
             {/* User */}
             {user?.role === "user" && <li>
-                <Link to={'/user-dashboard'}>User</Link>
+                <Link to={'/user-dashboard'}>{user?.name}</Link>
             </li>}
 
             {/* Admin */}
             {user?.role === "admin" && <li>
-                <Link to={'/admin-dashboard'}>Admin</Link>
+                <Link to={'/admin-dashboard'}>{user?.name}</Link>
             </li>}
 
             {/* logout */}
-            {user && <li className=" cursor-pointer" onClick={logout}>
+            {user && <li className="cursor-pointer" onClick={logout}>
                 logout
             </li>}
 

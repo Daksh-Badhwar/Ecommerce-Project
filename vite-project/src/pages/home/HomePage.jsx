@@ -17,7 +17,7 @@ const HomePage = () => {
     <HomePageProductCard/>
     <Track/>
     <Testimonial/>
-    {name}
+    
   </Layout>;
   
 };
