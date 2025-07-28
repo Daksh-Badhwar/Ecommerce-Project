@@ -212,6 +212,7 @@ const CartPage = () => {
                                                 addressInfo={addressInfo}
                                                 setAddressInfo={setAddressInfo}
                                                 buyNowFunction={buyNowFunction}
+                                                
                                             /> : <Navigate to={'/login'}/>
                                         }
                                     </div>
