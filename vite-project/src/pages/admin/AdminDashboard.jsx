@@ -9,7 +9,7 @@ import React from "react";
 const AdminDashboard = () => {
     const user = JSON.parse(localStorage.getItem('users'));
     const context = useContext(myContext);
-    const {getAllProduct, getAllOrder} = context;
+    const {getAllProduct, getAllOrder, getAllUser} = context;
     return (
         <div>
             {/* Top */}
@@ -144,8 +144,8 @@ const AdminDashboard = () => {
                                         </svg>
 
                                     </div>
-                                    <h2 className="title-font font-medium text-3xl text-pink-400 fonts1" >10</h2>
-                                    <p className=" text-pink-500  font-bold" >Total Order</p>
+                                    <h2 className="title-font font-medium text-3xl text-pink-400 fonts1" >{getAllUser.length}</h2>
+                                    <p className=" text-pink-500  font-bold" >Total User</p>
                                 </div>
                             </Tab>
                         </TabList>
