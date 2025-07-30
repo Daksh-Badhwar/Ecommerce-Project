@@ -4,7 +4,7 @@ import React from "react";
 
 const OrderDetail = () => {
     const context = useContext(myContext);
-    const { getAllOrder } = context;
+    const { getAllOrder, deleteProduct } = context;
     // console.log(getAllOrder)
     return (
         <div>
@@ -168,7 +168,7 @@ const OrderDetail = () => {
                                                         {order.date}
                                                     </td>
 
-                                                    <td className="h-12 px-6 text-md transition duration-300 border-t border-l first:border-l-0 border-pink-100 stroke-slate-500 text-slate-500 text-red-500 cursor-pointer ">
+                                                    <td onClick={()=> deleteProduct(order.id)} className="h-12 px-6 text-md transition duration-300 border-t border-l first:border-l-0 border-pink-100 stroke-slate-500 text-slate-500 text-red-500 cursor-pointer ">
                                                         Delete
                                                     </td>
                                                 </tr>
