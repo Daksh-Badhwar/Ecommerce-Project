@@ -9,6 +9,9 @@ import { fireDB } from "../../firebase/FirebaseConfig";
 import BuyNowModal from "../../components/buyNowModal/BuyNowModal";
 import { Navigate } from "react-router";
 import React from "react";
+import { clearCart } from "../../redux/cartSlice"; // Make sure this is in your cartSlice
+
+
 
 const CartPage = () => {
     const cartItems = useSelector((state) => state.cart);
@@ -84,13 +87,18 @@ const CartPage = () => {
         try {
             const orderRef = collection(fireDB, 'order');
             addDoc(orderRef, orderInfo);
+            
             setAddressInfo({
                 name: "",
                 address: "",
                 pincode: "",
                 mobileNumber: "",
             })
-            toast.success("Order Placed Successfull")
+            toast.success("Order Placed Successfully")
+            dispatch(clearCart());
+             localStorage.removeItem('cart');
+            
+
         } catch (error) {
             console.log(error)
         }

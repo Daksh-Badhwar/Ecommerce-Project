@@ -72,7 +72,7 @@ const UserDashboard = () => {
                                          console.log('item', item);
                                         const { id, date, quantity, price, title, productImageUrl, category } = item
                                         // console.log('order', order)
-                                        const { status } = order
+                                        const { status, date: orderDate } = order;
                                         return (
                                             <div key={index} className="mt-5 flex flex-col overflow-hidden rounded-xl border border-pink-100 md:flex-row">
                                                 {/* main 3  */}
@@ -87,7 +87,7 @@ const UserDashboard = () => {
 
                                                             <div className="mb-4">
                                                                 <div className="text-sm font-semibold">Date</div>
-                                                                <div className="text-sm font-medium text-gray-900">{date}</div>
+                                                                <div className="text-sm font-medium text-gray-900">{orderDate}</div>
                                                             </div>
 
                                                             <div className="mb-4">
