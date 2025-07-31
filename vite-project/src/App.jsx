@@ -8,6 +8,7 @@ import HomePage from "./pages/home/HomePage";
 
 import ProductInfo from "./pages/productInfo/ProductInfo";
 import ScrollTop from "./components/scrollTop/ScrollTop";
+
 import CartPage from "./pages/cart/CartPage";
 import AllProduct from "./pages/allProduct/AllProduct";
 import Signup from "./pages/registration/signup";
