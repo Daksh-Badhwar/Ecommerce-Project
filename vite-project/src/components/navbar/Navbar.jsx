@@ -55,7 +55,7 @@ const Navbar = () => {
 
             {/* logout */}
             {user && <li className="cursor-pointer" onClick={logout}>
-                logout
+                Logout
             </li>}
 
             {/* Cart */}
