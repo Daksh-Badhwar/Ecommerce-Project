@@ -7,7 +7,7 @@ import React from "react";
 import HomePage from "./pages/home/HomePage";
 
 import ProductInfo from "./pages/productInfo/ProductInfo";
-import ScrollTop from "./components/scrollTop/ScrollTop";
+import ScrollTop from "./components/scrolltop/ScrollTop";
 
 import CartPage from "./pages/cart/CartPage";
 import AllProduct from "./pages/allProduct/AllProduct";
@@ -30,7 +30,7 @@ const App = () => {
   return (
     <MyState>
       <Router>
-        <ScrollTop />
+        <ScrollTop/>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/*" element={<NoData />} />
