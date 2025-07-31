@@ -1,9 +1,8 @@
-import React from 'react'
+// src/pages/noPage/NoPage.jsx
+import React from "react";
 
 const NoPage = () => {
-  return (
-    <div>No page</div>
-  )
-}
+  return <h1>404 - Page Not Found</h1>;
+};
 
-export default NoPage
+export default NoPage;
