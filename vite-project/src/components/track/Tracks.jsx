@@ -1,5 +1,5 @@
 import React from "react";
-const track = () => {
+const Track = () => {
     return (
         <section>
             <div className=" container mx-auto px-5 py-10 md:py-14">
@@ -50,4 +50,4 @@ const track = () => {
     );
 }
 
-export default track;
+export default Track;
