@@ -106,8 +106,8 @@ const CartPage = () => {
     }
     return (
         <Layout>
-            <div className="container mx-auto px-4 max-w-7xl lg:px-0">
-                <div className="mx-auto max-w-2xl py-8 lg:max-w-7xl">
+            <div className="container mx-auto px-4 max-w-7xl lg:px-0 ">
+                <div className=" mx-auto max-w-2xl py-8 lg:max-w-7xl">
                     <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
                         Shopping Cart
                     </h1>
@@ -134,11 +134,11 @@ const CartPage = () => {
                                                         </div>
 
                                                         <div className="ml-4 flex flex-1 flex-col justify-between sm:ml-6">
-                                                            <div className="relative pr-9 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:pr-0">
+                                                            <div className=" pr-9 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:pr-0">
                                                                 <div>
-                                                                    <div className="flex justify-between">
+                                                                    <div className="flex justify-between ">
                                                                         <h3 className="text-sm">
-                                                                            <div className="font-semibold text-black">
+                                                                            <div className="font-semibold text-black ">
                                                                                 {title}
                                                                             </div>
                                                                         </h3>

@@ -5,7 +5,8 @@ import {
 } from "react-router-dom";
 import React from "react";
 import HomePage from "./pages/home/HomePage";
-import ProductInfo from "./pages/productInfo/ProductInfo";
+
+import ProductInfo from "./pages/productInfo/ProductInfom";
 import ScrollTop from "./components/scrolltop/ScrollTop";
 import CartPage from "./pages/cart/CartPage";
 import AllProduct from "./pages/allProduct/AllProduct";
