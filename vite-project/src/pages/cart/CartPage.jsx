@@ -97,6 +97,11 @@ const CartPage = () => {
             toast.success("Order Placed Successfully")
             dispatch(clearCart());
              localStorage.removeItem('cart');
+
+
+
+
+             
             
 
         } catch (error) {
